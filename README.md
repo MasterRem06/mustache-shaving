@@ -4,6 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 For a job recruting process, they asked me to create an interesting component in Angular 17. Since the theme of the other questions were around shaving the CEO's mustache, I used that as inspiration.
 
+https://github.com/user-attachments/assets/c19d72bc-b8cb-4016-9be3-669c9377114c
+
 ## Constraints
 
 - Angular 17
