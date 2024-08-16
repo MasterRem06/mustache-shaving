@@ -1,5 +1,5 @@
 {
-  "name": "my-app-2",
+  "name": "mustache-shavin",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:my-app-2": "node dist/my-app-2/server/server.mjs"
+    "serve:ssr:mustache-shavin": "node dist/mustache-shavin/server/server.mjs"
   },
   "private": true,
   "dependencies": {
