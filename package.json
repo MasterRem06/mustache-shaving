@@ -1,5 +1,5 @@
 {
-  "name": "mustache-shavin",
+  "name": "mustache-shaving",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:mustache-shavin": "node dist/mustache-shavin/server/server.mjs"
+    "serve:ssr:mustache-shaving": "node dist/mustache-shaving/server/server.mjs"
   },
   "private": true,
   "dependencies": {

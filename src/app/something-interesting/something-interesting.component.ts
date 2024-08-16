@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
-import {Component, HostListener, OnInit} from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 interface Hair {
     id: number;
-    isShaved?: boolean;
-    radius?: number;
-    color?: number;
-    angle?: number;
-    size?: number;
+    isShaved: boolean;
+    radius: number;
+    color: number;
+    angle: number;
+    size: number;
     mirror: number;
 }
 
@@ -33,7 +33,7 @@ interface Hair {
                 }
             </div>
 
-            <h3 *ngIf="!hairIds?.length">Congratulations!!!</h3>
+            <h3 *ngIf="!nonShavedHairIds?.length">Congratulations!!!</h3>
         </div>
     `,
     styles: [`
@@ -115,7 +115,7 @@ export class SomethingInterestingComponent implements OnInit {
     private readonly NUMBER_OF_HAIRS = 50;
 
     public hairs?: Hair[];
-    public hairIds?: number[]; 
+    public nonShavedHairIds?: number[]; 
 
     @HostListener('document:keydown.enter', ['$event'])
     onEnterHandler(_: KeyboardEvent) {
@@ -143,16 +143,16 @@ export class SomethingInterestingComponent implements OnInit {
                 mirror: Math.random() > 0.5 ? 1 : -1
             }
         });
-        this.hairIds = this.hairs.map(hair => hair.id);
+        this.nonShavedHairIds = this.hairs.map(hair => hair.id);
     }
 
     private shaveOneHair(): void {
-        const randomIndex = Math.floor(Math.random() * (this.hairIds?.length ?? 0));
-        const hairId = this.hairIds?.[randomIndex];
+        const randomIndex = Math.floor(Math.random() * (this.nonShavedHairIds?.length ?? 0));
+        const nonShavedHairId = this.nonShavedHairIds?.[randomIndex];
 
-        if (hairId != undefined && this.hairs?.[hairId]) {
-            this.hairs[hairId].isShaved = true;
-            this.hairIds = this.hairIds?.filter(hairId => hairId !== (this.hairIds?.[randomIndex] || 0))
+        if (nonShavedHairId != undefined && this.hairs?.[nonShavedHairId]) {
+            this.hairs[nonShavedHairId].isShaved = true;
+            this.nonShavedHairIds = this.nonShavedHairIds?.filter(hairId => hairId !== nonShavedHairId)
         }
     }
 }
